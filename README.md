@@ -17,8 +17,8 @@ Installation
 ------------
 #### Install package
 Run command
-```
-composer require vintage/yii2-invisible-recaptcha
+```bash
+$ composer require vintage/yii2-invisible-recaptcha
 ```
 or add
 ```json
@@ -45,12 +45,17 @@ return [
 
 3. Call widget in form
 
+```html
+<form id="send-feedbacl-js" method="post">
+```
 ```php
-ActiveForm::begin(['id' => 'send-feedback-js']);
-echo \vintage\recaptcha\widgets\InvisibleRecaptcha::widget([
+<?= \vintage\recaptcha\widgets\InvisibleRecaptcha::widget([
     'formSelector' => '#send-feedback-js',
-]);
-ActiveForm::end();
+]) ?>
+```
+```html
+<button type="submit">Send</button>
+</form>
 ```
 
 4. Validate in backend
@@ -70,6 +75,17 @@ if (!$validator->validate()) {
     return $validator->getErrors();
 }
 ```
+
+Configuration
+-------------
+Widget configuration options.
+
+| Option | Description | Type | Default |
+|--------|-------------|------|---------|
+| options | Html options for recaptcha container | array | `['data-badge' => 'inline', 'data-size' => 'invisible']` |
+| formSelector | Html form selector | string | 'form.invisible-recaptcha-js' |
+| callback | Callback JS function. Calls after captcha was successfully passed | string | 'triggerReCaptcha' |
+| siteKey | API site key | string | - |
 
 License
 -------
