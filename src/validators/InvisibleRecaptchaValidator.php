@@ -38,7 +38,7 @@ class InvisibleRecaptchaValidator extends Object
     /**
      * @var array
      */
-    private $_errors = [];
+    protected $errors = [];
 
 
     /**
@@ -114,7 +114,7 @@ class InvisibleRecaptchaValidator extends Object
      *
      * @return void
      */
-    private function sendRequest()
+    protected function sendRequest()
     {
         $client = new Client();
         /* @var \yii\httpclient\Response $response */
@@ -126,10 +126,10 @@ class InvisibleRecaptchaValidator extends Object
 
         if ($response->getIsOk()) {
             if ($response->data['success'] == false) {
-                $this->_errors = $response->data['error-codes'];
+                $this->errors = $response->data['error-codes'];
             }
         } else {
-            $this->_errors[] = 'Http client error';
+            $this->errors[] = 'Http client error';
         }
     }
 
@@ -140,6 +140,6 @@ class InvisibleRecaptchaValidator extends Object
      */
     public function getErrors()
     {
-        return $this->_errors;
+        return $this->errors;
     }
 }

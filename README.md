@@ -8,6 +8,7 @@
 
 Facade of Invisible reCAPTCHA by Google for Yii2 Framework. For more info read [official documentation](https://developers.google.com/recaptcha/).
 
+[![Build Status](https://travis-ci.org/Vintage-web-production/yii2-invisible-recaptcha.svg?branch=master)](https://travis-ci.org/Vintage-web-production/yii2-invisible-recaptcha)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/Vintage-web-production/yii2-invisible-recaptcha/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/Vintage-web-production/yii2-invisible-recaptcha/?branch=master)
 [![Total Downloads](https://poser.pugx.org/vintage/yii2-invisible-recaptcha/downloads)](https://packagist.org/packages/vintage/yii2-invisible-recaptcha)
 [![Latest Stable Version](https://poser.pugx.org/vintage/yii2-invisible-recaptcha/v/stable)](CHANGELOG.md)
