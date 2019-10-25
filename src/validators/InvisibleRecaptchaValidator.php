@@ -9,7 +9,7 @@ namespace vintage\recaptcha\validators;
 
 use vintage\recaptcha\helpers\RecaptchaConfig;
 use yii\base\InvalidConfigException;
-use yii\base\Object;
+use yii\base\BaseObject;
 use yii\httpclient\Client;
 
 /**
@@ -18,7 +18,7 @@ use yii\httpclient\Client;
  * @author Vladimir Kuprienko <vldmr.kuprienko@gmail.com>
  * @since 1.0
  */
-class InvisibleRecaptchaValidator extends Object
+class InvisibleRecaptchaValidator extends BaseObject
 {
     const RECAPTCHA_RESPONSE_PARAM = 'g-recaptcha-response';
     const VERIFY_API_ENDPOINT = 'https://www.google.com/recaptcha/api/siteverify';
